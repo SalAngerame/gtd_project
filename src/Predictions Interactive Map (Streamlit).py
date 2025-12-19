@@ -56,7 +56,7 @@ region_le.fit(gtd_df['Region Name'])
 X = gtd_df[feature_cols]
 y = region_le.transform(gtd_df['Region Name'])
 
-forest_model = joblib.load('../models/forest_model.joblib')
+forest_model = joblib.load('../model/forest_model.joblib')
 
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
